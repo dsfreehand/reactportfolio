@@ -1,0 +1,404 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif; /* Clean, modern font */
+  background-color: #f4f7f6; /* Light background color */
+  color: #333; /* Text color */
+  line-height: 1.6;
+  padding: 2rem;
+}
+
+h1, h2, h3 {
+  color: #333;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* For responsive fonts */
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+/* Header Styles */
+header {
+  background-color: #2c3e50; /* Dark blue background */
+  padding: 1rem 2rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: white;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  background-color: #007bff; /* Highlight on hover and active state */
+  color: white;
+  border-radius: 8px;
+}
+
+/* Portfolio Styles */
+#portfolio {
+  margin-top: 5rem; /* Space for sticky header */
+  padding: 3rem 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Portfolio Image Styling */
+#portfolio .card-img-top {
+  width: 100%;         /* Make the image take up the full width of the card */
+  height: 200px;       /* Set a fixed height for all images */
+  object-fit: cover;   /* Ensures the image maintains its aspect ratio and fills the area */
+  object-position: center; /* Center the image inside the container */
+}
+
+
+#resume {
+  padding-top: 40px; 
+  margin-top: 40px;
+}
+
+#about-me {
+  padding-top: 40px; 
+  margin-top: 40px;
+}
+
+/* About Me Section */
+#about-me {
+  background-color: #f4f7f6;
+  padding: 3rem 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 4rem; /* Space for the sticky header */
+}
+
+#about-me .about-me-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#about-me img.profile-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;   
+  object-position: center top;  
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+
+#about-me h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+#about-me .about-me-text p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+}
+
+#about-me .about-me-text p:last-child {
+  margin-bottom: 0; /* Remove bottom margin on the last paragraph */
+}
+
+@media (max-width: 768px) {
+  #about-me {
+    padding: 2rem;
+  }
+
+  #about-me h2 {
+    font-size: 2rem;
+  }
+
+  #about-me .about-me-text p {
+    font-size: 1rem;
+  }
+}
+
+
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Responsive grid */
+  gap: 2rem;
+}
+
+.project {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.project:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.project img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 2px solid #f4f7f6;
+}
+
+.project h3 {
+  font-size: 1.5rem;
+  margin: 1rem;
+}
+
+.project a {
+  display: inline-block;
+  margin: 0.5rem 1rem;
+  color: #007bff;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.project a:hover {
+  color: #0056b3;
+}
+
+.project a:first-child {
+  margin-left: 0;
+}
+
+/* Contact Form Styles */
+#contact {
+  margin: 3rem 0;
+  background-color: #fff;
+  padding: 2rem;  /* Reduced padding to make the section smaller */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 60%;  /* Reduced width to make the form smaller */
+  max-width: 800px; /* Set a max-width for better responsiveness */
+  margin: 3rem auto; /* Center the form */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+input, textarea {
+  padding: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 100%;
+  transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Footer Styles */
+footer {
+  margin-top: 3rem;
+  padding: 2rem;
+  background-color: #2c3e50;
+  color: white;
+  text-align: center;
+  border-radius: 8px;
+}
+
+footer a {
+  color: white;
+  margin: 0 1rem;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #007bff;
+}
+
+/* Resume Styles */
+#resume {
+  padding: 3rem 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 4rem; /* Space for the sticky header */
+}
+
+#resume h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Download Resume Button */
+#resume .btn {
+  background-color: #007bff;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+}
+
+#resume .btn:hover {
+  background-color: #0056b3;
+}
+
+/* Resume Sections */
+.resume-section {
+  margin-bottom: 2rem;
+}
+
+.resume-section h3 {
+  font-size: 1.8rem;
+  color: #333;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.resume-section ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.resume-section ul li {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.resume-section ul li h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #007bff;
+}
+
+.resume-section ul li p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Skills Section */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.skills-list span {
+  background-color: #007bff;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Add spacing between resume sections */
+.resume-section + .resume-section {
+  margin-top: 3rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #resume {
+    padding: 2rem;
+  }
+
+  .skills-list span {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .projects {
+    grid-template-columns: 1fr; /* Stacks the projects on smaller screens */
+  }
+
+  footer {
+    font-size: 0.9rem;
+  }
+}
+
+/* Override Bootstrap styles */
+.navbar-dark .navbar-nav .nav-link {
+  color: #f39c12;
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+  color: #e67e22;
+}
